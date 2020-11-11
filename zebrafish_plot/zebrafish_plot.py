@@ -32,6 +32,8 @@ if __name__ == '__main__':
         fullSimPath = dirPath + item
         if os.path.isdir(fullSimPath):
             sims2itOver.append(fullSimPath + "/")
+        else:
+            sims2itOver.append(dirPath)
 
 
     # Loop over every simulation you want to analyze
