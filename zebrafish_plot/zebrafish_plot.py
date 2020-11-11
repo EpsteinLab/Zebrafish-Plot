@@ -2,9 +2,9 @@
 This script creates plots to visualize the results of simulations of the differential growth model.
 Later on, it will also be used to visualize other models that work with discrete systems.
 
-This script starts by importing a csv file of the results, creates a plot, shows it, and then exports it as a png to the same folder it started in.
+This script starts by importing a csv file of the results, creates a plot, shows it, and then exports it as a png into a subfolder.
 Ideally, I would love to add a file search GUI, but I'm not sure if I'll get there.
-Will later add in support for visualizing where the iridophores were located, making spacetime plots, and making animations (once I add growth).
+This also exports a .gif file of the animations into the subfolder.
 """
 
 import numpy as np
@@ -21,11 +21,11 @@ if __name__ == '__main__':
     sims2itOver = []  # Will store path to directories you need to plot in here
 
     ###########################################################################################################
+    
     # MUST UPDATE PATH TO SIMULATIONS TO RUN SCRIPT 
     
-    basepath = '/home/chris/projects/difgrow_mc_sims/'
-    datepath = '20_09_23/'  # For now I'll have to change this manually. Will iterate through each sim run per day though
-    dirPath = basepath + datepath
+    dirPath = '/file/path/to/Simulations/'
+    
     ###########################################################################################################
 
     for item in os.listdir(dirPath):
